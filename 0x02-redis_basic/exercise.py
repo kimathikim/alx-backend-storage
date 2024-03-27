@@ -92,7 +92,7 @@ class Cache():
 
     def get(self, key: str, fn: Callable = None)\
             -> Union[str, bytes, int, float]:
-        """ Get data from redis and transform it to its python type """
+        """ Get data from redis and transform them to its python type """
         data = self._redis.get(key)
         if fn:
             return fn(data)
